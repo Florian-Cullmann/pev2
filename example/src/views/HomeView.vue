@@ -318,6 +318,19 @@ function addMessage(text) {
           </div>
           <form v-on:submit.prevent="submitPlan">
             <div class="mb-3">
+              <label for="planName" class="form-label">
+                Plan Name
+                <span class="small text-body-tertiary">(optional)</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="planName"
+                v-model="planName"
+                placeholder="Name for the plan"
+              />
+            </div>
+            <div class="mb-3">
               <div class="d-flex align-items-center mb-2">
                 <label for="planInput" class="form-label">
                   Plan
@@ -393,19 +406,6 @@ function addMessage(text) {
                 placeholder="Add notes about this plan"
               >
               </textarea>
-            </div>
-            <div class="mb-3">
-              <label for="planName" class="form-label">
-                Plan Name
-                <span class="small text-body-tertiary">(optional)</span>
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="planName"
-                v-model="planName"
-                placeholder="Name for the plan"
-              />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
