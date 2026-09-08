@@ -318,23 +318,10 @@ function addMessage(text) {
           </div>
           <form v-on:submit.prevent="submitPlan">
             <div class="mb-3">
-              <label for="planName" class="form-label">
-                Plan Name
-                <span class="small text-body-tertiary">(optional)</span>
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="planName"
-                v-model="planName"
-                placeholder="Name for the plan"
-              />
-            </div>
-            <div class="mb-3">
               <div class="d-flex align-items-center mb-2">
-                <label for="planInput" class="form-label">
-                  Plan
-                  <span class="small text-body-tertiary">(text or JSON)</span>
+                <label for="planName" class="form-label mb-0">
+                  Plan Name
+                  <span class="small text-body-tertiary">(optional)</span>
                 </label>
                 <div class="dropdown ms-auto">
                   <button
@@ -363,6 +350,19 @@ function addMessage(text) {
                   </div>
                 </div>
               </div>
+              <input
+                type="text"
+                class="form-control"
+                id="planName"
+                v-model="planName"
+                placeholder="Name for the plan"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="planInput" class="form-label">
+                Plan
+                <span class="small text-body-tertiary">(text or JSON)</span>
+              </label>
               <textarea
                 ref="planDropZoneRef"
                 :class="[
